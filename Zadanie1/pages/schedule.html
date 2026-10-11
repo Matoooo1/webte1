@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Môj Rozvrh">
+    <meta property="og:title" content="Rozvrh">
+    <meta property="og:description" content="Môj Rozvrh">
+    <meta property="og:image" content="../favicon.svg">
+
+    <title>Rozvrh</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/print.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+
+<body>
+<header>
+    <img src="../favicon.svg" alt="Monogram Mojich Inicialok">
+    <div class="headertxt">
+        <h1>Martin Pupava</h1>
+        <h2>Študent, zaujimajú ma webové technológie </h2>
+
+    </div>
+</header>
+<nav>
+    <button class="menu-button">☰</button>
+
+    <ul class="menu">
+        <li><a href="../index.html" >O mne</a></li>
+        <li><a href="../pages/cv.html">Životopis</a></li>
+        <li><a href="../pages/workspace.html">Pracovné Prostredie</a></li>
+        <li><a href="../pages/schedule.html" class="active">Rozvrh</a></li>
+        <li><a href="../pages/map.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Môj rozvrh na tento semester</h1>
+    <h2>Filtre:</h2>
+    <div class="filters">
+    <button type="button" data-filter="all">Všetko</button>
+    <button type="button" data-filter="lecture">Prednášky</button>
+    <button type="button" data-filter="exercise">Cvičenia</button>
+    </div>
+    <p id="current-class-message" aria-live="polite"></p>
+    <div class="table-container">
+    <table class="schedule">
+        <tr>
+            <th>Deň</th>
+            <th>7:00 - 8:00</th>
+            <th>8:00 - 9:00</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+            <th>12:00 - 13:00</th>
+            <th>13:00 - 14:00</th>
+            <th>14:00 - 15:00</th>
+            <th>15:00 - 16:00</th>
+            <th>16:00 - 17:00</th>
+            <th>17:00 - 18:00</th>
+            <th>18:00 - 19:00</th>
+            <th>19:00 - 20:00</th>
+            <th>20:00 - 21:00</th>
+
+        </tr>
+        <tr>
+            <td>Pondelok</td>
+            <td colspan="2"></td>
+            <td colspan="2" class="Exercise" data-day="1" data-start="09:00" data-end="11:00" data-type="exercise">Webové technológie 1</td>
+            <td colspan="2" ></td>
+            <td colspan="2" class="Lecture" data-day="1" data-start="13:00" data-end="15:00" data-type="lecture">Mikropočítače a ich programovanie</td>
+            <td colspan="6"></td>
+        </tr>
+        <tr>
+            <td>Utorok</td>
+            <td colspan="2"></td>
+            <td class="Gym" data-day="2" data-start="9:00" data-end="10:00" data-type="exercise">Telesná kultúra 3 </td>
+            <td colspan="2" class="Lecture" data-day="2" data-start="10:00" data-end="12:00" data-type="lecture">Webové technológie 1 / Diskrétna matematika</td>
+            <td></td>
+            <td colspan="2" class="Exercise" data-day="2" data-start="13:00" data-end="15:00" data-type="exercise">Počítačové siete</td>
+            <td colspan="2" class="Lecture" data-day="2" data-start="15:00" data-end="17:00" data-type="lecture">Programovacie techniky / Softvérové inžinierstvo</td>
+            <td class="Exercise" data-day="2" data-start="17:00" data-end="18:00" data-type="exercise">Softvérové inžinierstvo </td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>Streda</td>
+            <td colspan="3"></td>
+            <td colspan="2" class="Exercise" data-day="3" data-start="10:00" data-end="12:00" data-type="exercise">Mikropočítače a ich programovanie</td>
+            <td ></td>
+            <td colspan="2" class="Lecture" data-day="3" data-start="13:00" data-end="15:00" data-type="lecture">Webové technológie 1</td>
+            <td colspan="2"></td>
+            <td colspan="2" class="Exercise" data-day="3" data-start="17:00" data-end="19:00" data-type="exercise">Diskrétna matematika</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>Stvrtok</td>
+            <td ></td>
+            <td colspan="2" class="Exercise" data-day="4" data-start="8:00" data-end="10:00" data-type="exercise">Programovacie techniky</td>
+            <td ></td>
+            <td class="Exercise" data-day="4" data-start="11:00" data-end="12:00" data-type="exercise">Softvérové inžinierstvo</td>
+            <td></td>
+            <td colspan="2" class="Lecture" data-day="4" data-start="13:00" data-end="15:00" data-type="lecture">Počítačové siete </td>
+            <td colspan="6"></td>
+        </tr>
+        <tr>
+            <td>Piatok</td>
+            <td colspan="14"></td>
+        </tr>
+    </table>
+        <div class="semester-progress">
+            <p>Priebeh semestra: <span id="semester-percent">0 %</span></p>
+
+            <progress id="semester-progress" value="0" max="100"></progress>
+        </div>
+    </div>
+</main>
+
+<address>
+    <p> Martin Pupava 2026 </p>>
+    <p>
+        <a href="tel:+421900123456"> Tel: +421 900 123 456</a>
+        <a href="mailto:jop@gmail.com">E-Mail: jop@gmail.com</a><br>
+        <a href="https://leafletjs.com/"> Leaflet</a>
+        <a href=https://www.openstreetmap.org/>OpenStreetMap</a>
+    </p>
+</address>
+<script src="../js/script.js"></script>
+</body>
+</html>

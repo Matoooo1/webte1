@@ -1,0 +1,481 @@
+:root {
+
+    --brand-primary: black;
+    --brand-secondary: lightblue;
+    --accent: yellow;
+
+    --text-color: #1f2328;
+    --background-color: #f6f7f9;
+    --surface-color: white;
+    --muted-color: lightgray;
+    --hover-color: darkgray;
+
+    --border-color: #ccc;
+    --success-color: lightgreen;
+    --current-class-color: #7bfff4;
+    --success-border-color: #238636;
+    --shadow-color: rgb(0 0 0 / 20%);
+    --transparent-color: transparent;
+
+    --table-border: var(--border-color);
+    --table-padding: 10px;
+    --table-font-size: 16px;
+    --max-width: 1200px;
+    --radius: 10px;
+    --space: 20px;
+    --font-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Custom_Font", Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 30px auto;
+    padding: var(--space);
+}
+
+main h1 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--muted-color);
+    padding: 20px 40px;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--brand-primary);
+    font-size: 50px;
+    margin: 0;
+}
+
+header h2 {
+    text-align: center;
+    color: var(--brand-primary);
+    margin: 0;
+}
+
+header img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+nav {
+    background-color: var(--brand-primary);
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: var(--space);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    color: var(--surface-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: var(--radius);
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--hover-color);
+}
+
+.menu a.active {
+    background-color: var(--surface-color);
+    color: var(--brand-primary);
+}
+
+.menu-button {
+    display: none;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    background-color: var(--surface-color);
+    padding: var(--space);
+}
+
+.content img {
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-right: var(--space);
+    margin-bottom: 10px;
+}
+
+.text h1 {
+    font-size: 35px;
+    margin: 0 0 10px 0;
+}
+
+.text p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 10px 10px 10px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--muted-color);
+    text-align: center;
+    font-size: 20px;
+    padding: 25px;
+    width: 60%;
+    max-width: 700px;
+    margin: 30px auto;
+    border: 5px solid var(--brand-primary);
+}
+
+aside {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: var(--muted-color);
+}
+
+address {
+    background-color: var(--muted-color);
+    margin-top: auto;
+}
+
+address h2 {
+    font-size: 25px;
+    margin: 80px 0 0 0;
+    color: var(--brand-primary);
+    text-align: center;
+}
+
+address p {
+    font-size: 20px;
+    margin: 0;
+    color: var(--brand-primary);
+    text-align: center;
+}
+
+address h1 {
+    font-size: 20px;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex: 1;
+    padding: 30px;
+}
+
+.LFT {
+    background-color: var(--brand-secondary);
+}
+.LFT img {
+    width: 300px;
+    height: 400px;
+}
+.RGHT {
+    background-color: var(--muted-color);
+}
+
+.RGHT p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hotspot-image {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hotspot-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hotspot {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%);
+}
+
+.hotspot__dot {
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    background-color: var(--surface-color);
+    cursor: pointer;
+}
+
+.hotspot__dot:hover {
+    background-color: var(--brand-primary);
+}
+
+.hotspot__panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    padding: 10px;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hotspot:hover .hotspot__panel,
+.hotspot:focus-within .hotspot__panel {
+    opacity: 90%;
+    visibility: visible;
+}
+
+.hotspot:hover,
+.hotspot:focus-within {
+    z-index: 10;
+}
+
+.hotspot--left .hotspot__panel {
+    left: auto;
+    right: 0;
+}
+
+.hotspot-panel-mobile {
+    display: none;
+}
+
+.schedule {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    font-size: var(--table-font-size);
+}
+
+.schedule th,
+.schedule td {
+    border: 1px solid var(--table-border);
+    padding: var(--table-padding);
+    text-align: center;
+}
+
+.schedule th {
+    background-color: var(--brand-primary);
+    color: var(--surface-color);
+}
+
+.schedule tr:nth-child(odd) {
+    background-color: var(--muted-color);
+}
+
+.schedule tr:nth-child(even) {
+    background-color: var(--surface-color);
+}
+
+.schedule td.Exercise {
+    background-color: var(--brand-secondary);
+    font-weight: bold;
+}
+
+.schedule td.Lecture {
+    background-color: var(--success-color);
+    font-weight: bold;
+}
+
+.schedule td.Gym {
+    background-color: var(--accent);
+}
+
+.schedule td.current-class {
+    background-color: var(--current-class-color);
+    color: var(--brand-primary);
+    font-weight: bold;
+    outline: 3px solid var(--success-border-color);
+    outline-offset: -3px;
+}
+
+.semester-progress {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.semester-progress progress {
+    width: 100%;
+    height: 24px;
+}
+.filters button.active {
+    background-color: white;
+    color: black;
+}
+.filters button {
+    background-color: black;
+    color: white;
+}
+
+#map {
+    height: 800px;
+    width: 100%;
+}
+#maph2{
+    text-align: center;
+}
+
+#place-name,
+#map-message {
+
+    margin: 10px 0;
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+#places-list {
+
+    margin: 10px 0;
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+label{
+    font-size: var(--font-size);
+}
+
+@font-face {
+    font-family: "Custom_Font";
+    src: url("../fonts/customfont.ttf") format("truetype");
+}
+
+@media (max-width: 768px) {
+
+    .text h1 {
+        font-size: 35px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .content img {
+        width: 200px;
+    }
+
+    .menu-button {
+        display: block;
+        background: var(--transparent-color);
+        border: none;
+        color: var(--surface-color);
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .columns img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .schedule {
+        font-size: 13px;
+    }
+
+    .schedule th,
+    .schedule td {
+        padding: 6px;
+    }
+
+    .semester-progress {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    .semester-progress progress {
+        width: 100%;
+        height: 24px;
+    }
+
+    .hotspot__panel {
+        display: none;
+    }
+
+    .hotspot-panel-mobile {
+        display: block;
+        position: relative;
+        min-height: 130px;
+        margin: 15px auto;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: var(--surface-color);
+        border-radius: 8px;
+    }
+
+    .hiddentext {
+        display: none;
+    }
+
+    body:has(.hotspot:nth-of-type(1):hover)
+    .hotspot-panel-mobile .h1 {
+        display: block;
+    }
+
+    body:has(.hotspot:nth-of-type(2):hover)
+    .hotspot-panel-mobile .h2 {
+        display: block;
+    }
+
+    body:has(.hotspot:nth-of-type(3):hover)
+    .hotspot-panel-mobile .h3 {
+        display: block;
+    }
+
+    body:has(.hotspot:nth-of-type(4):hover)
+    .hotspot-panel-mobile .h4 {
+        display: block;
+    }
+
+    body:has(.hotspot:nth-of-type(5):hover)
+    .hotspot-panel-mobile .h5 {
+        display: block;
+    }
+
+    body:has(.hotspot:hover) .Placeholder {
+        display: none;
+    }
+}

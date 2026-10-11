@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interaktívna mapa s mojim bydliskom">
+    <meta property="og:title" content="Interaktívna mapa">
+    <meta property="og:description" content="Interaktívna mapa s mojim bydliskom">
+    <meta property="og:image" content="../favicon.svg">
+
+    <title>Kontakt</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/print.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+<header>
+    <img src="../favicon.svg" alt="Monogram Mojich Inicialok">
+    <div class="headertxt">
+        <h1>Martin Pupava</h1>
+        <h2>Študent, zaujimajú ma webové technológie </h2>
+
+    </div>
+</header>
+<nav>
+    <button class="menu-button">☰</button>
+
+    <ul class="menu">
+        <li><a href="../index.html" >O mne</a></li>
+        <li><a href="../pages/cv.html" >Životopis</a></li>
+        <li><a href="../pages/workspace.html">Pracovné Prostredie</a></li>
+        <li><a href="../pages/schedule.html">Rozvrh</a></li>
+        <li><a href="../pages/map.html" class="active">Kontakt</a></li>
+    </ul>
+</nav>
+<main>
+    <div><h1>Interaktivna Mapa</h1></div>
+    <div id="maph2"><h2>Vyznačené je moje bydlisko a škola</h2></div>
+    <div id="map"></div>
+        <div>
+            <p id="map-message">Klikni na mapu a vyber miesto, následne zadaj názov do poľa a stlač enter.</p>
+            <label for="place-name">Názov miesta:</label>
+            <input type="text" id="place-name" placeholder="Sem">
+
+
+        </div>
+    <h2>Moje miesta</h2>
+    <ul id="places-list"></ul>
+
+    <h2>Výpočet vzdialenosti</h2>
+
+    <label for="start-place">Vyber miesto:</label>
+    <select id="start-place">
+        <option value="">-- Vyber bod --</option>
+        <option value="school">FEI STU Bratislava</option>
+        <option value="home">Domov</option>
+    </select>
+
+    <label for="end-place">Vyber cieľ:</label>
+    <select id="end-place">
+        <option value="">-- Vyber bod --</option>
+        <option value="school">FEI STU Bratislava</option>
+        <option value="home">Domov</option>
+    </select>
+
+    <button type="button" id="calculate-distance">
+        Vypočítať vzdialenosť
+    </button>
+
+    <p id="distance-result"></p>
+
+</main>
+<address>
+    <p> Martin Pupava 2026 </p>>
+    <p>
+        <a href="tel:+421900123456"> Tel: +421 900 123 456</a>
+        <a href="mailto:jop@gmail.com">E-Mail: jop@gmail.com</a><br>
+        <a href="https://leafletjs.com/"> Leaflet</a>
+        <a href=https://www.openstreetmap.org/>OpenStreetMap</a>
+    </p>
+</address>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+@media print {
+
+    nav {
+        display: none;
+    }
+
+    body {
+        background: white;
+        font-size: 12px;
+    }
+
+    header,
+    .LFT,
+    .RGHT,
+    section,
+    aside,
+    address {
+        background: white;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+    .column {
+        padding: 10px;
+    }
+
+    .LFT img {
+        width: 180px;
+        height: auto;
+    }
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+    address {
+        font-size: 10px;
+    }
+
+    address h2,
+    address p,
+    address h1 {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Čo mám na stole.">
+    <meta property="og:title" content="Pracovné Prostredie">
+    <meta property="og:description" content="Čo mám na stole.">
+    <meta property="og:image" content="../favicon.svg">
+
+
+    <title>Pracovné Prostredie</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/print.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+
+<body>
+<header>
+    <img src="../favicon.svg" alt="Monogram Mojich Inicialok">
+    <div class="headertxt">
+        <h1>Martin Pupava</h1>
+        <h2>Študent, zaujimajú ma webové technológie </h2>
+
+    </div>
+</header>
+<nav>
+    <button class="menu-button">☰</button>
+
+    <ul class="menu">
+        <li><a href="../index.html" >O mne</a></li>
+        <li><a href="../pages/cv.html" >Životopis</a></li>
+        <li><a href="../pages/workspace.html" class="active">Pracovné Prostredie</a></li>
+        <li><a href="../pages/schedule.html">Rozvrh</a></li>
+        <li><a href="../pages/map.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <h1>Moje pracovné prostredie</h1>
+    <div id="maph2"><h2>Vyznačených je 5 najdôležitejších vecí</h2></div>
+
+    <figure class="hotspot-image">
+
+        <img src="../img/workspace.jpg" alt="Photo of my desk">
+
+        <div class="hotspot HS1" style="--x: 24%; --y: 58%">
+            <button class="hotspot__dot" type="button"></button>
+
+            <div class="hotspot__panel">
+                <h2>Notebook</h2>
+                <p>
+                    Môj krásny, tažký notebook HP Victus 16. Veľmi dôležitý na programovanie.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="hotspot" style="--x: 37%; --y: 65.5%">
+            <button class="hotspot__dot" type="button"></button>
+
+            <div class="hotspot__panel">
+                <h2>Ipod Nano</h2>
+                <p>
+                    MP3 prehrávač, Ipod Nano piatej generácie. Prečo? Vie to prehrať hudbu. Nič viac nič menej. Výborná vec pri cvičení.
+                </p>
+            </div>
+        </div>
+
+        <div class="hotspot hotspot--left" style="--x: 73%; --y: 60%">
+            <button class="hotspot__dot" type="button"></button>
+
+            <div class="hotspot__panel">
+                <h2>Myška</h2>
+                <p>
+                    Razer Viper Mini. Je káblova lebo sa mi nechce riešit baterky.
+                </p>
+            </div>
+        </div>
+
+        <div class="hotspot hotspot--left" style="--x: 60%; --y: 17.75%">
+            <button class="hotspot__dot" type="button"></button>
+
+            <div class="hotspot__panel">
+                <h2>Monitor</h2>
+                <p>
+                    27 palcový 1440p monitor Gigabyte G27Q. Vyborný monitor na programovanie, taký na internáte nemam.
+                </p>
+            </div>
+        </div>
+
+        <div class="hotspot hotspot--left" style="--x: 91%; --y: 27.75%">
+            <button class="hotspot__dot" type="button"></button>
+
+            <div class="hotspot__panel">
+                <h2>CDčka</h2>
+                <p>
+                    CDčka, Rôzne žánre, od Michaela Jacksonan po Rammstein. navrchu je vidiet album od Linkin Park - From Zero.
+                </p>
+            </div>
+        </div>
+
+    </figure>
+    <div class="hotspot-panel-mobile">
+        <div class="Placeholder"><p>Vyber bod na obrázku a zobrazia sa jeho informácie.</p></div>
+        <div class="hiddentext h5"> <p>CDčka, Rôzne žánre, od Michaela Jacksonan po Rammstein. navrchu je vidiet album od Linkin Park - From Zero.</p></div>
+        <div class="hiddentext h1"> <p>Notebook, Môj krásny, tažký notebook HP Victus 16. Veľmi dôležitý na programovanie.</p></div>
+        <div class="hiddentext h2"> <p>MP3 prehrávač, Ipod Nano piatej generácie. Prečo? Vie to prehrať hudbu. Nič viac nič menej. Výborná vec pri cvičení.</p></div>
+        <div class="hiddentext h3"> <p>Myška, Razer Viper Mini</p></div>
+        <div class="hiddentext h4"> <p>27 palcový 1440p monitor Gigabyte G27Q. Vyborný monitor na programovanie, taký na internáte nemam.</p></div>
+    </div>
+</main>
+<address>
+    <p> Martin Pupava 2026 </p>>
+    <p>
+        <a href="tel:+421900123456"> Tel: +421 900 123 456</a>
+        <a href="mailto:jop@gmail.com">E-Mail: jop@gmail.com</a><br>
+        <a href="https://leafletjs.com/"> Leaflet</a>
+        <a href=https://www.openstreetmap.org/>OpenStreetMap</a>
+    </p>
+</address>
+<script src="../js/script.js"></script>
+</body>
+
+</html>
