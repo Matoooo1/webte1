@@ -1,5 +1,5 @@
 Martin Pupava
-odkaz
+https://webte1.fei.stuba.sk/~xpupava/Z1/index.html
 Tento web obsahuje 5 podstránok. 
 Niečo málo o mne vrátane stručného životopisu a mojeho rozvrhu hodín.
 Taktiež obsahuje interaktívnu mapu.
