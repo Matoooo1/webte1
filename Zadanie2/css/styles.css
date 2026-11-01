@@ -1,0 +1,159 @@
+:root {
+    --color-brand: #1d6f8a;
+    --succes: lightgrey;
+    --surface-color: white;
+    --brand-primary: black;
+    --brand-secondary: lightblue;
+    --hover-color: darkgray;
+    --radius: 10px;
+    --space: 20px;
+    --transparent-color: transparent;
+    --muted-color: lightgray;
+    --background-color: #f6f7f9;
+    --text-color: #1f2328;
+}
+@font-face {
+    font-family: "Custom_Font";
+    src: url("../fonts/customfont.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: "Custom_Font", Arial, sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+main{
+    background-color: var(--succes);
+    margin: 3rem;
+}
+nav {
+    background-color: var(--brand-primary);
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: var(--space);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    color: var(--surface-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: var(--radius);
+    transition: 0.3s;
+}
+.menu a:hover {
+    background-color: var(--hover-color);
+}
+
+.menu a.active {
+    background-color: var(--surface-color);
+    color: var(--brand-primary);
+}
+
+.menu-button {
+    display: none;
+}
+#status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+.chkbx {
+    background-color: white;
+    transition: background-color 0.2s;
+    font-size: 40px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+}
+.chkbx:has(input:checked) {
+    background-color: lightgreen;
+}
+#use-local{
+    display: none;
+}
+button {
+    padding: 0.4rem 0.8rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--color-brand);
+    color: #ffffff;
+
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: progress;
+}
+header {
+    background-color: grey;
+    padding: 1rem;
+}
+h1{
+    color: whitesmoke;
+    text-align: center;
+    background-color: grey;
+    font-size: 4rem;
+    padding: 1rem;
+}
+footer {
+    background-color: var(--muted-color);
+    margin-top: auto;
+}
+
+footer h2 {
+    font-size: 25px;
+    margin: 80px 0 0 0;
+    color: var(--brand-primary);
+    text-align: center;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0;
+    color: var(--brand-primary);
+    text-align: center;
+}
+
+address h1 {
+    font-size: 20px;
+}
+#filters{
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+        background: var(--transparent-color);
+        border: none;
+        color: var(--surface-color);
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+}
