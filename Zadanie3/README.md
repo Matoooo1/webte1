@@ -1,38 +1,56 @@
-# ZADANIE TRETIE TESIM SA
+# Správa úloh – Todo aplikácia
 
-This template should help get you started developing with Vue 3 in Vite.
+## Opis aplikácie
 
-## Recommended IDE Setup
+Aplikácia slúži na vytváranie, zobrazovanie, upravovanie a mazanie úloh. Používateľ môže ku každej úlohe zadať názov, popis, dátum a čas začiatku a ukončenia.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Aplikácia umožňuje:
+- Vytvárať nové úlohy.
+- Upravovať a mazať existujúce úlohy.
+- Označovať úlohy ako dokončené alebo nedokončené.
+- Filtrovať úlohy podľa ich stavu.
+- Vyhľadávať úlohy podľa názvu.
+- Zoraďovať úlohy podľa dátumu alebo názvu.
+- Zobrazovať úlohy v kalendári pomocou FullCalendar.
+- Komunikovať s REST API.
 
-## Recommended Browser Setup
+## Použité technológie
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Vue 3** – tvorba používateľského rozhrania.
+- **Vite** – vývojové a zostavovacie prostredie.
+- **Bootstrap 5** – štýlovanie a responzívny dizajn.
+- **FullCalendar** – zobrazovanie úloh v kalendári.
+- **REST API** – získavanie a odosielanie údajov.
 
-## Customize configuration
+## AI použité bolo
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Inštalácia a spustenie projektu
 
-## Project Setup
+### 1. Inštalácia závislostí
+
+Po stiahnutí alebo naklonovaní projektu otvorte terminál v priečinku projektu a spustite:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Spustenie aplikácie
+
+Pre spustenie vývojového servera použite príkaz:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Po spustení Vite zobrazí adresu, na ktorej je aplikácia dostupná.
+
+### 3. Vytvorenie produkčnej verzie
+
+Pre zostavenie aplikácie určenej na produkčné nasadenie použite:
 
 ```sh
 npm run build
 ```
+
+---
+
