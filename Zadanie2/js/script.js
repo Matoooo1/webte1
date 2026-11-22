@@ -14,7 +14,7 @@ const SOURCES = [
     {
       id: "druzba",
       name: "Jedáleň Družba",
-      localUrl: "source/druzba.html",
+      localUrl: "source/drzba.html",
       Url: "https://www.druzbacatering.sk/obedove-menu/",
       parse: parseDRUZBA,
     },
